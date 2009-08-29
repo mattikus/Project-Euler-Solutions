@@ -1,0 +1,21 @@
+CC = gcc
+CFLAGS = -Wall -pedantic -std=c99
+LDFLAGS = 
+
+.PHONY: all run runpy runc clean
+
+all: #
+
+#: #.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<
+
+run: runpy runc
+
+runpy:
+	python #.py
+
+runc: #
+	./#
+
+clean:
+	rm -f #
