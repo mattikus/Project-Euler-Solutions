@@ -31,8 +31,9 @@ int main()
     for (int y = 999; y > 99; y--) {
       tmp = x * y;
       if (check_palin(tmp) == true) {
-        if (tmp > answer)
+        if (tmp > answer) {
           answer = tmp;
+        }
       }
     }
   }

@@ -4,8 +4,9 @@
 bool isdiv(long answer)
 {
   for (int x=2; x < 21; x++) {
-    if (answer % x) 
+    if (answer % x) {
       return false;
+    }
   }
 
   return true;

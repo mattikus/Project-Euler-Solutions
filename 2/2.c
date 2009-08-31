@@ -7,8 +7,9 @@ int main()
   long tmp = 0;
 
   for (;;) {
-    if (y >= 4000000)
+    if (y >= 4000000) {
       break;
+    }
     tmp = y;
     y += x;
     x = tmp;
