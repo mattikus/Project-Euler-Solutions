@@ -4,18 +4,18 @@ LDFLAGS =
 
 .PHONY: all run runpy runc clean
 
-all: #
+all: 14
 
-#: #.c
+14: 14.c
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<
 
 run: runpy runc
 
 runpy:
-	python #.py
+	python 14.py
 
-runc: #
-	./#
+runc: 14
+	./14
 
 clean:
-	rm -f #
+	rm -f 14
