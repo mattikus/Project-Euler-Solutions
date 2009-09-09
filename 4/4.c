@@ -22,7 +22,7 @@ bool check_palin(int input)
   return true;
 }
 
-int main()
+int main(void)
 {
   int tmp = 0;
   int answer = 0;
@@ -38,6 +38,5 @@ int main()
     }
   }
 
-  printf("Problem 3 Answer: %d\n", answer);
-  return 0;
+  printf("Problem 4 Answer: %d\n", answer);
 }

@@ -12,7 +12,7 @@ bool isdiv(long answer)
   return true;
 }
 
-int main()
+int main(void)
 {
   long answer = 2520;
 
@@ -21,5 +21,4 @@ int main()
   }
 
   printf("Problem 5 Answer: %ld\n", answer);
-  return 0;
 }

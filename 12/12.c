@@ -13,7 +13,7 @@ int numdiv(long x)
   return divs;
 }
 
-int main()
+int main(void)
 {
   long answer = 0;
 
@@ -24,5 +24,4 @@ int main()
     }
   }
   printf("Problem 12 Answer: %ld\n", answer);
-  return 0;
 }

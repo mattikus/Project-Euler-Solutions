@@ -16,7 +16,7 @@ long doseq(long n)
   return steps;
 }
 
-int main()
+int main(void)
 {
   long answer = 0;
   long tmp;
@@ -30,5 +30,4 @@ int main()
     }
   }
   printf("Problem 14 Answer: %ld\n", answer);
-  return 0;
 }

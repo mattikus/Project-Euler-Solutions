@@ -1,11 +1,8 @@
 #include <stdio.h>
 
-int ctoi(char x)
-{
-  return x - '0';
-}
+int ctoi(char x) { return x - '0'; }
 
-int main() 
+int main(void) 
 {
   long tmp = 0;
   long answer = 0;
@@ -19,5 +16,4 @@ int main()
   }
 
   printf("Problem 8 Answer: %ld\n", answer);
-  return 0;
 }

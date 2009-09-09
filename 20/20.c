@@ -4,7 +4,7 @@
 
 int ctoi(char x) { return x - '0'; }
 
-int main()
+int main(void)
 {
   mpz_t n;
   char result[150];
@@ -17,5 +17,4 @@ int main()
     answer += ctoi(result[i]);
   }
   printf("Problem 20 Answer: %ld\n", answer);
-  return 0;
 }

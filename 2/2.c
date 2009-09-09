@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
   long answer = 0;
   long x = 0, y = 1;
@@ -19,5 +19,4 @@ int main()
   }
 
   printf("Problem 2 Answer: %ld\n", answer);
-  return 0;
 }
