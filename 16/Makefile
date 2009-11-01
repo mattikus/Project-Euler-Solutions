@@ -1,6 +1,6 @@
 CC = clang
-CFLAGS = -Wall -pedantic -std=c99
-LDFLAGS = 
+CFLAGS = -Wextra -Wall -pedantic -std=c99 -ggdb
+LDFLAGS = -lgmp
 
 .PHONY: all run runpy runc clean
 
@@ -18,4 +18,4 @@ runc: 16
 	./16
 
 clean:
-	rm -f 16
+	rm -f 16 16.dSYM
