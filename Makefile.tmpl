@@ -1,21 +1,30 @@
-#CC = clang
-CFLAGS = -Wall -Wextra -pedantic -std=c99
-LDFLAGS = 
+include ../Makefile.include
 
-.PHONY: all run runpy runc clean
+.PHONY: run runpy runc rungo clean
 
-all: #
+all: c go
 
-#: #.c
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<
+c: <>.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o <>c $<
 
-run: runpy runc
+go: <>.6
+	$(GL) -o <>g $<
 
-runpy:
-	python #.py
+<>.6: <>.go
+	$(GC) <>.go
 
-runc: #
-	./#
+run: runpy runc rungo
+
+runpy: <>.py
+	python <>.py
+
+runc: <>c
+	./<>c
+
+rungo: <>g
+	./<>g
 
 clean:
-	rm -f #
+	rm -f <>c <>g <>.6
+
+# :vim set ft=make:

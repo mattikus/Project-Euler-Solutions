@@ -1,0 +1,4 @@
+CC = clang
+CFLAGS = -Wall -pedantic -std=c99
+GC = 6g
+GL = 6l
