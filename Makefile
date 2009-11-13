@@ -1,30 +1,10 @@
-include ../Makefile.include
+.PHONY: all proj% clean
 
-.PHONY: run runpy runc rungo clean
+all:
+	@echo "Usage: run make proj{ID} where {ID} is a project eueler problem id"
 
-all: c go
-
-c: ..c
-	$(CC) $(CFLAGS) $(LDFLAGS) -o .c $<
-
-go: ..6
-	$(GL) -o .g $<
-
-..6: ..go
-	$(GC) ..go
-
-run: runpy runc rungo
-
-runpy: ..py
-	python ..py
-
-runc: .c
-	./.c
-
-rungo: .g
-	./.g
+proj%:
+	@$(MAKE) -C $(subst proj,,$@) run
 
 clean:
-	rm -f .c .g ..6
-
-# :vim set ft=make:
+	@echo "Run make clean inside of each folder you'd like to clean"

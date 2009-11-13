@@ -6,10 +6,7 @@ int main(void)
   long x = 0, y = 1;
   long tmp = 0;
 
-  for (;;) {
-    if (y >= 4000000) {
-      break;
-    }
+  while (y <= 4000000) {
     tmp = y;
     y += x;
     x = tmp;
