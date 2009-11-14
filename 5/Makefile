@@ -1,8 +1,8 @@
 PROB = 5
-CSRCS = $(PROB).c
-GSRCS = $(PROB).go
+CFILES = $(PROB).c
+GOFILES = $(PROB).go
 
 include ../Makefile.include
 
-CFLAGS +=
+CFLAGS += 
 LDFLAGS +=

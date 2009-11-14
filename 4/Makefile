@@ -1,6 +1,6 @@
 PROB = 4
-CSRCS = $(PROB).c
-GSRCS = $(PROB).go
+CFILES = $(PROB).c
+GOFILES = $(PROB).go
 
 include ../Makefile.include
 
