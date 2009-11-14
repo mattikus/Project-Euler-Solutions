@@ -11,4 +11,5 @@ int main(void)
   }
 
   printf("Problem 1 Answer: %d\n", answer);
+  return 0;
 }
