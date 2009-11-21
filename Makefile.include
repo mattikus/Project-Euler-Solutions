@@ -2,6 +2,7 @@ include $(GOROOT)/src/Make.$(GOARCH)
 
 SHELL = /bin/sh
 CC = clang
+HC = ghc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=c99
 LDFLAGS =
 
@@ -9,7 +10,7 @@ COBJS = $(CFILES:.c=.o)
 
 .PHONY: clean run runpy runc rungo test all Makefile ../Makefile.include
 
-all: $(PROB)c $(PROB)g
+all: $(PROB)c $(PROB)g $(PROB)h
 
 $(PROB)c: $(COBJS)
 	$(CC) $(LDFLAGS) -o $@ $<
@@ -20,7 +21,10 @@ $(PROB)g: _go_.$O $(OFILES)
 _go_.$O: $(GOFILES)
 	$(GC) -o $@ $(GOFILES)
 
-run: runpy runc rungo
+$(PROB)h: $(PROB).hs
+	$(HC) --make -o $@ -osuf o_h $<
+
+run: runpy runc rungo runh
 
 runpy: $(PROB).py
 	python $<
@@ -31,7 +35,10 @@ runc: $(PROB)c
 rungo: $(PROB)g
 	./$(PROB)g
 
+runh: $(PROB)h
+	./$(PROB)h
+
 clean:
-	$(RM) $(PROB)c $(COBJS) $(PROB)g _go_.$O
+	$(RM) $(PROB)c $(COBJS) $(PROB)g _go_.$O $(PROB)h *.o_h *.hi
 
 # :vim set ft=make:
