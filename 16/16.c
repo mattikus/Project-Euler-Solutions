@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 #define MAX_SIZE 1000
+#define CHAR_OFFSET 48
 
 int main(void)
 {
@@ -12,9 +13,9 @@ int main(void)
   mpz_init_set_si(ans, 2);
 
   mpz_pow_ui(ans, ans, 1000);
-  gmp_printf("%Zd\n", ans);
-
   len = gmp_snprintf(buf, MAX_SIZE, "%Zd", ans);
-  for (int i = 0; i < len; i++) { nans += buf[i] - 48; }
+  for (int i = 0; i < len; i++) { nans += buf[i] - CHAR_OFFSET; }
   printf("Problem 16 Answer: %d\n", nans);
+
+  return 0;
 }
