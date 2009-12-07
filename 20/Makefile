@@ -5,4 +5,4 @@ GOFILES = $(PROB).go
 include ../Makefile.include
 
 CFLAGS += 
-LDFLAGS +=
+LDFLAGS += -lgmp
