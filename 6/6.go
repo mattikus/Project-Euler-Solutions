@@ -1,20 +1,18 @@
 package main
 
-import (
-  "fmt";
-  "math";
-)
+import "fmt"
 
 func main() {
-  sum_squares := 1;
-  for i := 2; i < 101; i++ {
-    sum_squares += int(math.Pow(float64(i), 2))
-  }
+	sum_squares := 1
+	for i := 2; i < 101; i++ {
+		sum_squares += i * i
+	}
 
-  square_sums := 0;
-  for i := 1; i < 101; i++ {
-    square_sums += i
-  }
-  square_sums = int(math.Pow(float64(square_sums), 2));
-  fmt.Println("Problem 6 Answer:", square_sums - sum_squares)
+	square_sums := 0
+	for i := 1; i < 101; i++ {
+		square_sums += i
+	}
+	square_sums *= square_sums
+
+	fmt.Println("Problem 6 Answer:", square_sums-sum_squares)
 }
